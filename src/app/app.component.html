@@ -1,0 +1,26 @@
+<ion-app>
+  
+  <!-- start menu section -->
+  <ion-menu side="start" menuId="start-menu" contentId="menu">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>LPC</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list lines="full">
+        <ion-menu-toggle>
+          <ion-list>
+            <ion-item *ngFor="let item of items" [routerLink]="item.link" [class.active]="item.link === activeItem">
+              <ion-icon slot="start" [name]="item.iconName"></ion-icon>
+              {{ item.name }}
+            </ion-item>
+          </ion-list>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <!-- router outlet -->
+  <ion-router-outlet id="menu"></ion-router-outlet>
+</ion-app>

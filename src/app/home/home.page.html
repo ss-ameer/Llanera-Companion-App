@@ -1,0 +1,46 @@
+<ion-header class="ion-padding">
+  <app-toolbar></app-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <img class="ion-padding"
+        [src]="homeImage.banner" 
+        alt="The seal of Llanera, Nueva Ecija"
+        class="seal">
+    </ion-item>
+
+    <ion-item-divider sticky>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Button1</ion-col>
+          <ion-col>Button2</ion-col>
+          <ion-col>Button3</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item-divider>
+    
+    <ion-item>
+      <div class="ion-padding-horizontal">
+        <p class="justified" *ngFor="let para of homeInfoPara">
+          {{para}}</p>
+        <p>From Wikipedia, the free encyclopedia</p>
+      </div>
+    </ion-item>
+    <ion-item>
+
+      <ion-card>
+        <ion-card-header>
+          History
+        </ion-card-header>
+        <ion-card-content>
+          <p>
+            {{homeHistPara}}
+          </p>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
