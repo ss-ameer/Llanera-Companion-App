@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutPage implements OnInit {
 
-  constructor() { }
+  member: any;
+
+  constructor(public dataService: DataService) {
+    
+   }
+
+   chunkedArray(array: any[] | null | undefined, chunkSize: number): any[][] {
+    if (!array) {
+      return [];
+    }
+
+    const result = [];
+    for (let i = 0; i < array.length; i += chunkSize) {
+      result.push(array.slice(i, i + chunkSize));
+    }
+    return result;
+  }
+
+  ionViewDidEnter() {
+    this.member = this.dataService.getDeveloper();
+  }
 
   ngOnInit() {
   }

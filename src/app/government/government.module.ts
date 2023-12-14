@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { GovernmentPageRoutingModule } from './government-routing.module';
 
 import { GovernmentPage } from './government.page';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GovernmentPageRoutingModule
+    GovernmentPageRoutingModule,
+    SharedModule
   ],
   declarations: [GovernmentPage]
 })

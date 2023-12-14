@@ -1,63 +1,26 @@
-<ion-header class="ion-padding">
+<ion-header>
   <app-toolbar></app-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let card of cateCardsData; let i = index" (click)="toggleContent(i)">
+  <ion-card 
+    *ngFor="let establishment of cateCardsData">
     <ion-card-header>
-      {{ card.title }}
+      {{ establishment.title }}
     </ion-card-header>
-
-    <ion-card-content *ngIf="selectedCardIndex === i">
+    <ion-card-content>
       <ion-list>
-        <ion-item *ngFor="let establishment of card.content" (click)="openEndMenu(establishment)">
+        <ion-item 
+          *ngFor="let establishment of establishment.content"
+          (click)="onItemClick(establishment)">
           <ion-title>{{ establishment.conTitle }}</ion-title>
-          <ion-icon name="ellipse" slot="end" 
-          [class.open]="isEstablishmentOpen(establishment)" [class.closed]="!isEstablishmentOpen(establishment)"></ion-icon>
+          <ion-icon 
+            name="ellipse" 
+            slot="end" 
+            [class.open]="isEstablishmentOpen(establishment)"
+            [class.closed]="!isEstablishmentOpen(establishment)"></ion-icon>
         </ion-item>
       </ion-list>
     </ion-card-content>
   </ion-card>
 </ion-content>
-
-<!-- end menu section -->
-<ion-menu side="end" menuId="end-menu" contentId="menu" class="end-menu">
-  <ion-header class="ion-padding">
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-button menuToggle>
-          <ion-icon name="arrow-back"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-      <ion-title>
-        {{ selectedEstablishment?.conTitle }}
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <img class="fullWidth" [src]="selectedEstablishment?.conCover">
-      <ion-item>
-        {{ selectedEstablishment?.conType }}
-      </ion-item>
-      <ion-card>
-        <ion-card-content>
-          <p class="descPara">
-            {{ selectedEstablishment?.conDesc }}
-          </p>
-        </ion-card-content>
-      </ion-card>
-      <ion-item>
-        <ion-icon name="location" class="ion-padding"></ion-icon>
-        {{ selectedEstablishment?.conLoc }}
-      </ion-item>
-    </ion-list>
-  </ion-content>
-  <ion-footer>
-    <ion-toolbar>
-      <ion-buttons slot="end">
-        <ion-button>View More ></ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-footer>
-</ion-menu>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-government',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GovernmentPage implements OnInit {
 
-  constructor() { }
+  govEstablishment: any;
+  govOfficial: any;
+  
+
+  constructor(public dataService: DataService) {
+    this.govEstablishment = this.dataService.getGovEstablishment();
+    this.govOfficial = this.dataService.getGovOfficial();
+  }
 
   ngOnInit() {
   }

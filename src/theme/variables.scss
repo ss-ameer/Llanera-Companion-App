@@ -74,6 +74,71 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  // white
+  --ion-color-cust-white: #E4DFDA;
+	--ion-color-cust-white-rgb: 228,223,218;
+	--ion-color-cust-white-contrast: #000000;
+	--ion-color-cust-white-contrast-rgb: 0,0,0;
+	--ion-color-cust-white-shade: #c9c4c0;
+	--ion-color-cust-white-tint: #e7e2de;
+
+  .ion-color-cust-white {
+    --ion-color-base: var(--ion-color-cust-white);
+    --ion-color-base-rgb: var(--ion-color-cust-white-rgb);
+    --ion-color-contrast: var(--ion-color-cust-white-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-cust-white-contrast-rgb);
+    --ion-color-shade: var(--ion-color-cust-white-shade);
+    --ion-color-tint: var(--ion-color-cust-white-tint);
+  }
+
+  // green
+	--ion-color-cust-green: #69bb7b;
+	--ion-color-cust-green-rgb: 105,187,123;
+	--ion-color-cust-green-contrast: #000000;
+	--ion-color-cust-green-contrast-rgb: 0,0,0;
+	--ion-color-cust-green-shade: #5ca56c;
+	--ion-color-cust-green-tint: #78c288;
+
+  .ion-color-cust-green {
+    --ion-color-base: var(--ion-color-cust-green);
+    --ion-color-base-rgb: var(--ion-color-cust-green-rgb);
+    --ion-color-contrast: var(--ion-color-cust-green-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-cust-green-contrast-rgb);
+    --ion-color-shade: var(--ion-color-cust-green-shade);
+    --ion-color-tint: var(--ion-color-cust-green-tint);
+  }
+
+  // yellow
+  --ion-color-cust-yellow: #fde85d;
+	--ion-color-cust-yellow-rgb: 253,232,93;
+	--ion-color-cust-yellow-contrast: #000000;
+	--ion-color-cust-yellow-contrast-rgb: 0,0,0;
+	--ion-color-cust-yellow-shade: #dfcc52;
+	--ion-color-cust-yellow-tint: #fdea6d;
+
+  .ion-color-cust-yellow {
+    --ion-color-base: var(--ion-color-cust-yellow);
+    --ion-color-base-rgb: var(--ion-color-cust-yellow-rgb);
+    --ion-color-contrast: var(--ion-color-cust-yellow-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-cust-yellow-contrast-rgb);
+    --ion-color-shade: var(--ion-color-cust-yellow-shade);
+    --ion-color-tint: var(--ion-color-cust-yellow-tint);
+  }
+
+  * {
+    font-family: 'poppins';
+  }
+
+  ion-toolbar {
+    --min-height: 100px;
+    --ion-background-color: var(--ion-color-cust-green)
+  }
+
+  ion-footer {
+    text-align: center;
+  }
+  
 }
 
 @media (prefers-color-scheme: dark) {

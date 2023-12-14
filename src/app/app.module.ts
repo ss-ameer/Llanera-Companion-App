@@ -6,11 +6,15 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CategoriesPageModule } from './categories/categories.module';
+import { EstablishmentViewPageModule } from './establishment-view/establishment-view.module';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CategoriesPageModule,
+    EstablishmentViewPageModule],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

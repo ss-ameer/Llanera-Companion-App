@@ -1,8 +1,15 @@
 ion-item.active {
-    background-color: green;
+    --ion-background-color: var(--ion-color-cust-yellow);
     padding: 1px 0px;
   }
 
   ion-item.active ion-icon {
     color: green;
   }
+
+  .logo-container {
+    width: 200px;
+    height: 200px;
+    margin: 40px auto 40px auto;
+  }
+

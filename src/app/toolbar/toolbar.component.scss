@@ -1,0 +1,17 @@
+ion-toolbar {
+    --background: var(--ion-color-cust-green);
+    // --padding-top: 1vh;
+}
+
+ion-menu-button, ion-title {
+    --color: var(--ion-color-white);
+}
+
+ion-menu-button {
+    font-size: 1.2rem;
+    // width: 50%;
+}
+
+ion-title {
+    font-size: 1.2rem;
+}

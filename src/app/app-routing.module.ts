@@ -12,25 +12,22 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'entry',
-    loadChildren: () => import('./entry/entry.module').then( m => m.EntryPageModule)
-  }, 
-  {
-    path: 'services',
-    loadChildren: () => import('./services/services.module').then( m => m.ServicesPageModule)
-  },
-  {
-    path: 'about',
+    path: 'about', data: {title: 'About'},
     loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
   },
   {
-    path: 'government',
+    path: 'government', data: {title: 'Government'},
     loadChildren: () => import('./government/government.module').then( m => m.GovernmentPageModule)
   },
   {
     path: 'categories', data: {title: 'Categories'},
     loadChildren: () => import('./categories/categories.module').then( m => m.CategoriesPageModule)
   },
+  {
+    path: 'establishment-view', data: {title: 'View Mode'},
+    loadChildren: () => import('./establishment-view/establishment-view.module').then( m => m.EstablishmentViewPageModule)
+  },
+  
 ];
 
 @NgModule({

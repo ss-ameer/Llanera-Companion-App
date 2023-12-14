@@ -1,9 +1,10 @@
-<ion-header class="ion-padding">
+<ion-header>
   <app-toolbar></app-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list lines="none">
+    <span #infoSec></span>
     <ion-item>
       <img class="ion-padding"
         [src]="homeImage.banner" 
@@ -14,33 +15,58 @@
     <ion-item-divider sticky>
       <ion-grid>
         <ion-row>
-          <ion-col>Button1</ion-col>
-          <ion-col>Button2</ion-col>
-          <ion-col>Button3</ion-col>
+          <ion-col class="ion-padding" (click)="scrollToInfo()">Intro</ion-col>
+          <ion-col class="ion-padding" (click)="scrollToHistory()">History</ion-col>
+          <ion-col class="ion-padding" (click)="scrollToGeography()">Geography</ion-col>
         </ion-row>
       </ion-grid>
     </ion-item-divider>
     
     <ion-item>
-      <div class="ion-padding-horizontal">
-        <p class="justified" *ngFor="let para of homeInfoPara">
-          {{para}}</p>
-        <p>From Wikipedia, the free encyclopedia</p>
-      </div>
+      <ion-card>
+        <ion-card-content>
+          <p class="justified" *ngFor="let para of homePara.info">
+            {{para}}</p>
+        </ion-card-content>
+      </ion-card>
     </ion-item>
+    <span #histSec></span>
     <ion-item>
-
       <ion-card>
         <ion-card-header>
-          History
+          <ion-card-title>History</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <p>
-            {{homeHistPara}}
+          <p class="ion-padding-bottom" *ngFor="let para of homePara.hist">
+            {{ para }}
           </p>
         </ion-card-content>
       </ion-card>
-
+    </ion-item>
+    <span #geogSec></span>
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Georaphy</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>
+            {{ homePara.geog.desc }}
+          </p>
+          <ion-list>
+            <ion-row>
+              <ion-col *ngFor="let brgy of homePara.geog.barangay">
+                <ion-item>
+                  <ion-thumbnail slot="start">
+                    <img [src]="brgy.thumb">
+                  </ion-thumbnail>
+                  <ion-label>{{ brgy.name }}</ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
     </ion-item>
   </ion-list>
 </ion-content>
