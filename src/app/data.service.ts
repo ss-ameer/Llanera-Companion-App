@@ -554,8 +554,8 @@ export class DataService {
         conName: 'Syed Ameer Sibuma',
         conAdd: 'Brgy Plaridel, Llanera NE.',
         conDOB: '2001-06-16',
-        conImg: '../../devImgSAS.png',
-        conMotto: 'Time is gold, when watching bold.'
+        conImg: '../../assets/image/devImgSAS.jpg',
+        conMotto: 'Time is gold, experience is diamond.'
       },
 
       {
@@ -564,7 +564,7 @@ export class DataService {
       conAdd: 'Brgy Plaridel, Llanera NE', 
       conDOB: '2002-08-09', 
       conMotto: 'Everything must come to and end', 
-      conImg: '../../devImgLCS.png'},
+      conImg: '../../assets/image/devImgLCS.jpg'},
       
       {
       conRole: 'Documentation - Development',
@@ -572,7 +572,7 @@ export class DataService {
       conAdd: 'Brgy Macarse. Zaragoza NE', 
       conDOB: '2002-11-23', 
       conMotto: 'Sometimes you win, sometimes you learn.', 
-      conImg: '../../devImgWTA.png'},
+      conImg: '../../assets/image/devImgWTA.jpg'},
       
       {
       conRole: 'Development',
@@ -580,7 +580,7 @@ export class DataService {
       conAdd: 'Cabanatuan, NE', 
       conDOB: '2001-02-15', 
       conMotto: 'Always trust before you happy', 
-      conImg: '../../devImgJL.png'},
+      conImg: '../../assets/image/devImgJL.jpg'},
 
       {
         conRole: 'Development',
@@ -588,7 +588,7 @@ export class DataService {
         conAdd: 'Cabanatuan, NE', 
         conDOB: '2000-12-06', 
         conMotto: 'Live the moment to the fullest', 
-        conImg: '../../devImgJHG.png'},
+        conImg: '../../assets/image/devImgJHG.jpg'},
       
     ]}
 
